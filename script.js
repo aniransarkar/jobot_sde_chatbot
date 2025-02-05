@@ -14,9 +14,18 @@ function selectOption(option) {
     // Flash rainbow colors, then change background and display cat-heart image
     flashRainbowColors(function () {
       document.getElementById("question").style.display = "none"; // Hide the question
-      document.body.style.backgroundImage = "url('background.jpg')"; // Change background image
-      document.body.style.backgroundSize = "cover"; // Ensure full coverage
+
+      // Set the background for the webpage
+      document.body.style.backgroundImage = "url('background.jpg')";
+      document.body.style.backgroundSize = "cover"; // Ensure full coverage on large screens
       document.body.style.backgroundPosition = "center"; // Center the background
+      document.body.style.backgroundAttachment = "fixed"; // Keep it fixed during scrolling
+
+      // Mobile-specific background adjustments
+      if (window.innerWidth <= 768) {
+        // For mobile screens
+        document.body.style.backgroundSize = "contain"; // Make sure the entire background image is visible
+      }
 
       displayCatHeart();
     });
