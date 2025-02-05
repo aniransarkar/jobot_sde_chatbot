@@ -1,40 +1,50 @@
 /* style.css */
 
 body {
-    font-family: Arial, sans-serif; /* Fallback font family */
-    text-align: center; /* Center-align text */
-    margin: 0; /* Remove default margin */
-    background-color: #FADADD; /* Set background color to light pink */
+  font-family: Arial, sans-serif; /* Fallback font family */
+  text-align: center; /* Center-align text */
+  margin: 0; /* Remove default margin */
+  background-color: #fadadd; /* Set background color to light pink */
+  background-image: none; /* Initially, no background image */
 }
 
 #container {
-    display: flex; /* Use flexbox layout */
-    flex-direction: column; /* Stack elements vertically */
-    align-items: center; /* Center-align items horizontally */
-    justify-content: center; /* Center-align items vertically */
-    height: 100vh; /* Make the container full viewport height */
+  display: flex; /* Use flexbox layout */
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center; /* Center-align items horizontally */
+  justify-content: center; /* Center-align items vertically */
+  height: 100vh; /* Make the container full viewport height */
 }
 
 #image-container {
-    /* This container will hold the images */
+  /* This container will hold the images */
 }
 
 #question {
-    font-family: 'Sacramento', cursive; /* Apply Sacramento font to the question */
-    font-size: 52px; /* Set font size for the question */
+  font-family: "Sacramento", cursive; /* Apply Sacramento font to the question */
+  font-size: 52px; /* Set font size for the question */
 }
 
 #options {
-    margin-top: 20px; /* Add space above the options */
+  margin-top: 20px; /* Add space above the options */
 }
 
 button {
-    padding: 10px 20px; /* Set padding for buttons */
-    margin: 0 10px; /* Set margin around buttons */
-    font-size: 26px; /* Set font size for buttons */
-    font-family: 'Sacramento', cursive; /* Apply Sacramento font to the options */
-    background-color: #FB607F; /* Set button background color */
-    color: white; /* Set text color to white */
-    border: none; /* Remove button border */
-    cursor: pointer; /* Set cursor to pointer on hover */
+  padding: 10px 20px; /* Set padding for buttons */
+  margin: 0 10px; /* Set margin around buttons */
+  font-size: 26px; /* Set font size for buttons */
+  font-family: "Sacramento", cursive; /* Apply Sacramento font to the options */
+  background-color: #fb607f; /* Set button background color */
+  color: white; /* Set text color to white */
+  border: none; /* Remove button border */
+  cursor: pointer; /* Set cursor to pointer on hover */
+}
+
+/* For smaller screens (mobile devices) */
+@media (max-width: 768px) {
+  body {
+    background-size: cover; /* Adjust the image to fill the screen on mobile devices */
+    background-position: center center; /* Center the image */
+    background-attachment: scroll; /* Allow scrolling for background on mobile */
+  }
 }
